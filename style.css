@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Adjust as needed */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-text {
+    flex: 2; /* Give more space to text */
+    text-align: left;
+    padding-right: 20px; /* Add some space between text and image */
+}
+
+.header-text h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2.5rem;
+}
+
+.header-text p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+
+.header-text a {
+    color: #00bcd4; /* Light blue for links */
+    text-decoration: none;
+}
+
+.header-text a:hover {
+    text-decoration: underline;
+}
+
+.header-image {
+    flex: 1; /* Space for image */
+    text-align: center; /* Center image if it's smaller than flex item */
+    min-width: 150px; /* Ensure image container doesn't get too small */
+}
+
+.header-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.last-updated {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff; /* Blue accent for section titles */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.job {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Light separator for jobs within a section */
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.job h3 {
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.job h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+    font-style: italic;
+}
+
+.job p {
+    margin: 5px 0;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 8px;
+}
+
+ul ul { /* Nested lists */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+sup {
+    font-size: 0.75em; /* For R squared */
+}
+
+sub {
+    font-size: 0.75em; /* For CO2 */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center;
+    }
+
+    .header-text {
+        padding-right: 0; /* Remove padding when stacked */
+        text-align: center; /* Center text when stacked */
+        margin-bottom: 15px; /* Add space below text */
+    }
+
+    .header-image img {
+        margin-bottom: 10px;
+    }
+
+    section {
+        margin: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    .header-text p {
+        font-size: 0.9rem;
+    }
+}
