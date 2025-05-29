@@ -1,112 +1,174 @@
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Matching the example's sans-serif font */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa; /* Light gray background, similar to example */
     color: #333;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1.5rem 0;
-    text-align: center;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around; /* Adjust as needed */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    max-width: 1000px;
+.container {
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.header-text {
-    flex: 2; /* Give more space to text */
-    text-align: left;
-    padding-right: 20px; /* Add some space between text and image */
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40; /* Dark background for navbar, like example */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #444; /* Slight border */
 }
 
-.header-text h1 {
-    margin-bottom: 0.25rem;
-    font-size: 2.5rem;
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-text p {
-    margin: 0.25rem 0;
-    font-size: 1rem;
-}
-
-.header-text a {
-    color: #00bcd4; /* Light blue for links */
+.nav-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
     text-decoration: none;
 }
 
-.header-text a:hover {
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #adb5bd; /* Lighter text color for nav links */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff; /* White on hover/active */
+}
+
+/* Main Two-Column Layout */
+.main-container {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px; /* Space between sidebar and content */
+}
+
+.sidebar {
+    flex: 0 0 280px; /* Fixed width for sidebar, adjust as needed */
+    background-color: #fff; /* White background for sidebar */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Subtle shadow */
+    height: fit-content; /* So it doesn't stretch unnecessarily */
+}
+
+.content-area {
+    flex: 1; /* Takes remaining space */
+}
+
+/* Sidebar Content Styling */
+.profile-pic {
+    width: 150px; /* Adjust as needed */
+    height: 150px;
+    border-radius: 50%; /* Circular picture */
+    display: block;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    border: 3px solid #eee;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.objective-sidebar p {
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #e9ecef; /* Light line for separation */
+    margin: 20px 0;
+}
+
+.contact-info p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #333;
+}
+.contact-info p strong {
+    display: block;
+    color: #555;
+    margin-bottom: 2px;
+}
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+.contact-info a:hover {
     text-decoration: underline;
 }
 
-.header-image {
-    flex: 1; /* Space for image */
-    text-align: center; /* Center image if it's smaller than flex item */
-    min-width: 150px; /* Ensure image container doesn't get too small */
+
+/* Content Area Sections Styling */
+.content-area section {
+    background: #fff; /* White background for content sections */
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Subtle shadow */
 }
 
-.header-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-}
-
-.last-updated {
-    font-size: 0.8em;
-    font-style: italic;
-    color: #ccc;
-    margin-top: 10px;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-section h2 {
-    color: #333;
-    border-bottom: 2px solid #007bff; /* Blue accent for section titles */
+.content-area section h2 {
+    font-size: 1.8em;
+    color: #343a40; /* Darker heading color */
+    border-bottom: 2px solid #007bff; /* Accent color from previous design */
     padding-bottom: 10px;
+    margin-top: 0; /* Remove default margin */
     margin-bottom: 20px;
 }
 
 .job {
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee; /* Light separator for jobs within a section */
+    border-bottom: 1px solid #f0f0f0; /* Lighter separator for jobs */
 }
-
 .job:last-child {
     border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
-
 .job h3 {
+    margin-top: 0;
     margin-bottom: 5px;
-    color: #007bff;
+    color: #007bff; /* Blue for job titles */
+    font-size: 1.2em;
 }
-
-.job h4 {
+.job h4 { /* Objective/sub-project titles */
     margin-top: 10px;
     margin-bottom: 5px;
     color: #555;
     font-style: italic;
+    font-size: 1em;
 }
-
 .job p {
     margin: 5px 0;
 }
@@ -114,60 +176,77 @@ section h2 {
 ul, ol {
     padding-left: 20px;
 }
-
 ul li, ol li {
     margin-bottom: 8px;
 }
-
-ul ul { /* Nested lists */
+ul ul {
     margin-top: 5px;
     margin-bottom: 5px;
-    padding-left: 20px;
 }
 
-sup {
-    font-size: 0.75em; /* For R squared */
+sup, sub {
+    font-size: 0.75em;
 }
 
-sub {
-    font-size: 0.75em; /* For CO2 */
+/* Technical Skills specific styling */
+#skills h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+#skills p, #skills ul li {
+    font-size: 0.95em;
 }
 
+
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
+    padding: 20px 0;
+    background: #343a40; /* Matching navbar background */
+    color: #adb5bd; /* Lighter text color */
     margin-top: 30px;
+    font-size: 0.9em;
+}
+.last-updated {
+    font-style: italic;
+    margin-bottom: 5px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* Stack header items vertically */
-        text-align: center;
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
     }
-
-    .header-text {
-        padding-right: 0; /* Remove padding when stacked */
-        text-align: center; /* Center text when stacked */
-        margin-bottom: 15px; /* Add space below text */
-    }
-
-    .header-image img {
-        margin-bottom: 10px;
-    }
-
-    section {
-        margin: 15px 10px;
+    .sidebar {
+        flex: 0 0 auto; /* Reset flex basis */
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .header-text h1 {
-        font-size: 2rem;
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .header-text p {
-        font-size: 0.9rem;
+    .nav-links {
+        margin-top: 10px;
+        flex-direction: column; /* Stack nav links */
+    }
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .sidebar h2 {
+        font-size: 1.2em;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .content-area section h2 {
+        font-size: 1.5em;
     }
 }
